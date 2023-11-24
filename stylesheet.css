@@ -1,0 +1,14 @@
+.ico{
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+.comp{
+    border-radius: 25px;
+    background-color: gray;
+    image-resolution: 10%;
+    
+}
+.comp1{
+    cursor:not-allowed !important; 
+}
