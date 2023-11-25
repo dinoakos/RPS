@@ -5,18 +5,27 @@ function choosen(kep){
     switch(kep){
         case 'rock':
             window.alert('rock');
+            document.getElementById('paper').style="background-color: transparent";
+            document.getElementById('scissors').style="background-color: transparent";
             document.getElementById('rock').style="background-color: teal";
             repeatedGreetings();
+            
             break;
         case 'paper':
             window.alert('paper');
+            document.getElementById('rock').style="background-color: transparent";
+            document.getElementById('scissors').style="background-color: transparent";
             document.getElementById('paper').style="background-color: teal";
             repeatedGreetings();
+            
             break;
         case 'scissors':
             window.alert('scissors');
+            document.getElementById('paper').style="background-color: transparent";
+            document.getElementById('rock').style="background-color: transparent";
             document.getElementById('scissors').style="background-color: teal";
             repeatedGreetings();
+            
             
             break;
     }
@@ -91,14 +100,10 @@ await sleep(1000)
 }
 
 function disableIcons(){
-    document.getElementById('rock').onclick="#";
-    document.getElementById('paper').onclick="#";
-    document.getElementById('scissors').onclick="#";
+    document.getElementById("overlay").setAttribute("class","overlayed");
 }
 function enableIcons(){
-    document.getElementById('rock').setAttribute("onclick","choosen('rock')");
-    document.getElementById('paper').setAttribute("onclick","choosen('paper')");
-    document.getElementById('scissors').setAttribute("onclick","choosen('scissors')");
+    document.getElementById("overlay").removeAttribute("class");
 }
 
   
